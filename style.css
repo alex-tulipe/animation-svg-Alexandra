@@ -1,0 +1,92 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+svg{
+    width: 500px;
+}
+
+#snow1{
+    animation: snow ease 3s infinite;
+    transform-box: fill-box;
+}
+
+#snow2{
+    animation: snow ease 1s infinite;
+    transform-box: fill-box;
+}
+
+#snow3{
+    animation: snow ease 2.5s infinite;
+    transform-box: fill-box;
+}
+
+@keyframes snow{
+    from{
+        opacity: 1;
+        transform: translateY(-20%);
+    }top{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}
+
+#tail{
+    animation: tail 2.5s infinite alternate;
+    transform-box: fill-box;
+    transform-origin: top right;
+}
+
+@keyframes tail{
+    from{
+        transform: rotateZ(0deg);
+    }to{
+        transform: rotateZ(20deg);
+    }
+}
+
+#snow-man{
+    animation: snow-man 3s infinite alternate ease;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes snow-man{
+    from{
+        transform: rotateZ(-10deg);
+
+    }to{
+        transform: rotateZ(10deg);
+
+    }
+
+}
+
+
+#light1{
+    animation: light1 3s ease infinite alternate;
+}
+
+@keyframes light1{
+    from{
+        fill: rgb(220, 20, 160);
+    }to{
+        fill: rgb(224, 87, 114);
+    }
+}
+
+#light2{
+    animation: light2 2.5s ease infinite alternate;
+}
+
+@keyframes light2{
+    from{
+        fill: rgb(25, 183, 231);
+    }to{
+        fill: rgb(98, 106, 214);
+    }
+}
